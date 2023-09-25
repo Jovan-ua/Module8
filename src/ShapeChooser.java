@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ShapeShooser {
+public class ShapeChooser {
     private String shapeName;
     Circle circle = new Circle();
     Square square = new Square();

@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-       ShapeShooser shapeShooser = new ShapeShooser();
+       ShapeChooser shapeShooser = new ShapeChooser();
        shapeShooser.shapeScanner();
         System.out.println(shapeShooser.shapeChoose());
     }
