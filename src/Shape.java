@@ -1,3 +1,12 @@
 public abstract class Shape {
-    public abstract String getShape();
+    private String shapeName;
+
+    public String getShapeName() {
+        return shapeName;
+    }
+
+    public Shape(String shapeName){
+        this.shapeName = shapeName;
+    }
+
 }

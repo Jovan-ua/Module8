@@ -1,32 +1,44 @@
 import java.util.Scanner;
 public class ShapeChooser {
-    private String shapeName;
+    private String userShapeName;
     Circle circle = new Circle();
     Square square = new Square();
     Triangle triangle = new Triangle();
     Rectangle rectangle = new Rectangle();
     Ellipse ellipse = new Ellipse();
+    Shape shape = null;
     public void shapeScanner(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write your Shape");
-        shapeName = scanner.nextLine();
+        userShapeName = scanner.nextLine();
     }
-    public String shapeChoose(){
+    public void shapeChoose(){
+
         String errorShape = "Try another Shape";
-        switch (shapeName.toLowerCase()){
+        switch (userShapeName.toLowerCase()){
             case "circle":
-                return circle.getShape();
+                 shape = new Circle();
+                 break;
             case "square":
-                return square.getShape();
+                 shape = new Square();
+                 break;
             case "triangle":
-                return triangle.getShape();
+                shape = new Triangle();
+                break;
             case "rectangle":
-                return rectangle.getShape();
+                shape = new Rectangle();
+                break;
             case "ellipse":
-                return ellipse.getShape();
+                shape = new Ellipse();
+                break;
             default:
-                return errorShape;
+                System.out.println("Try another Shape");
+                System.exit(1);
 
         }
+ShapeNamePrinter shapeNamePrinter = new ShapeNamePrinter();
+        shapeNamePrinter.printShapeName(shape);
     }
-}
+
+    }
+

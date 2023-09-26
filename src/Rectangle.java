@@ -1,6 +1,6 @@
-public class Rectangle extends Shape{
-    @Override
-    public String getShape() {
-        return "Your Shape is Rectangle";
+public class Rectangle extends Shape {
+    public Rectangle(){
+        super("Rectangle");
     }
+
 }
